@@ -111,3 +111,200 @@ Notes starts here:
 
         * Can be also be used to access the file in current directory
             >./file1.txt
+
+## CSS
+1. Stands for **Cascading Style Sheet**
+2. Used for styling and making our site more attractive to users
+
+### Adding CSS
+
+1. Inline - Same line as of html tag
+
+    ```
+    <html style = "background:blue" ></html> 
+    ```
+2. Internal - Use style tag and enclose the CSS code inside it
+
+    ```
+    <style>
+        body{
+            background: red;
+        }
+    </style>
+    ```
+3. External - Create a Styles CSS file and link to the html file
+    ```
+    <head>
+        <link rel = "stylesheet" href = "styles.css">
+    </head>
+    ``` 
+
+### Selectors
+
+1) Element selector
+    ```
+    h2{
+        color:red;
+    }
+    ```
+
+2) Class selector
+    ```
+    .red-heading{
+        color:red;
+    }
+    ```
+
+3) Id selector
+    ```
+    #nav{
+        color:red
+    }
+    ```
+
+4) Attribute selector
+    ```
+    p[draggable]{
+        color:red
+    }
+    ```
+
+5) Universal selector
+    ```
+    *{
+        color:red
+    }
+    ```
+
+### CSS colors 
+
+1) Hex code     -   ```000000 to ffffff```
+2) RGB          -   ```(0,0,0) to (255,255,255)```
+3) RGBa         -   'a' is for opacity
+4) HSL          -   Hue saturation lightness ```(0, 0, 0)```
+5) HSLa         -   ```'a' is for opacity```
+
+
+### Units
+* 1px - 1/96th inch
+* 1pt - 1/72nd inch  
+* 1em - 100% of parent
+* 1rem - 100% of root
+
+### Box-Model
+![Image](Images/box-model.png)
+
+
+### Combining selectors
+1) Group 
+    ```
+    selector, selector{
+        color: violet;
+    }
+    ```
+
+2) Child 
+    ```
+    selector > selector {
+        color: red;
+    }
+    ```
+3) Descendant
+    ```
+    selector selector{
+        color: blue;
+    }
+    ```
+
+4) Chaining
+    ```
+    selectorselector{
+        color: green;
+    }
+    ```
+5) Combining combiners
+    ```
+    selector selectorselector{
+        font-size: 0.5rem;
+    }
+    ```
+
+### Positioning
+1) **Static** : default position
+2) **Relative** : positioning relative to default position
+3) **Absolute** : positon relative to nearest positioned ancestor
+4) **Fixed** : Get fixed and doesn't move even if scrolled
+
+> Note: Z-index is used to set the position of an element below or above other element
+
+### CSS display
+1) **Inline**: Takes only needeed.
+2) **Block**: Takes the whole width.
+3) **Inline-block**: Allow us to set width and height and also keep it in Inline.
+4) **None**: Disapper the element
+
+### Float
+1. Wrapping text using float and clear
+    ```
+    img{
+        float: right;
+    }
+    ```
+2. To clear the float from the footer type
+    ```
+    footer{
+        float: clear;
+    }
+    ```
+
+### Responsive website
+There are 4 ways:
+1) Media queries
+2) CSS flexbox
+3) CSS grid
+4) External frameworks eg: bootstrap
+
+#### Media Queries
+
+* Adding breakpoints for differnet devices to define responsive layouts
+    ```
+    div{
+        background-color: red;
+        height:200px;
+        width:200px;
+    }
+
+    @media (max-width: 600px){
+        div{
+            height:100px;
+            wifth:100px
+        }
+    }
+    ```
+
+#### CSS Flexbox
+* Best for when we need to make any in one-dimensional responsive such as nav bar
+    ```
+    .container{
+        display: flex;
+        gap:10px;
+        flex-direction: row;
+        flex-basis: 100px;
+    }
+    ```
+
+#### CSS Grid
+* Best for two dimensional layout 
+```
+.container{
+    display : grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    gap:10px;
+}
+```
+
+#### Bootstrap / CSS framework
+
+* Has pre-made CSS tags and can be just copied to our project
+
