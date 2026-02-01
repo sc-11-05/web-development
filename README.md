@@ -308,3 +308,186 @@ There are 4 ways:
 
 * Has pre-made CSS tags and can be just copied to our project
 
+## Javascript
+
+### Alerts
+* To give an alert to the user.
+    ```
+    alert("Hello User")
+    ```
+
+### Data Types
+1) String
+2) Numbers
+3) Boolean
+
+    ```
+    typeof(123) //number
+    typeof("hello") //string
+    typeof(true) //boolean
+    ```
+
+### Variables
+* Use to store the values in a container called variable.
+    ```
+    var myName = "Sujal";
+    const age = 20;
+    let name = "Sun" // prefered to be used in modern javascript
+    ```
+> Note: let prevents you from redeclaring inside the same function block
+
+### Strings
+1. A sequence of characters
+2. Functions on strings.
+    * String concatenation
+        ```
+        "Hello " + "world";
+        ```
+    * String length
+        ```
+        var name = "Sujal";
+        name.length;
+        ```
+    * String slicing
+        ```
+        var name = "Sujal"
+        name.slice(0,4)
+        ```
+    * String upper and lower
+        ```
+        char.toUpperCase();
+        char.toLowerCase();
+        ```
+
+### Arithmetic and Modulo character
+1. Operators used to perform the operation on numbers
+    ```
+    var a = 1+2
+    var b = 2-3
+    var c = 10/5
+    var d = 3*3
+    var e = 9%6
+    ```
+
+
+### Functions
+1. Reusable block of code which can be called (function call) anywhere in the program.
+    ```
+    function sum(){
+        return 2+4;
+    }
+
+    sum();
+
+    function diff(a,b){
+        return a - b;
+    }
+
+    diff(4,2)
+    ```
+
+### Random function
+1. Used to generate any random number between 0 and 1 (1 not included)
+
+    ```
+    var n = Math.random(); //  0 - 0.9999999...
+    ```
+
+### Control statements
+1. Used to perform the conditional statements 
+    ```
+    if (age>18){
+        console.log("Eligible");
+    }
+
+    else{
+        console.log("Not Eligible");
+    }
+    ```
+### Comparators and Equality Operators
+1. Used to compare two or more values
+    ```
+    === is equal to
+    !== is not equal to
+    > greater than
+    < lesser than
+    >= greater than or equal to
+    <= lesser than or equal to
+    ```
+
+### Combining Comparators
+1. Can be used to check two or more condition or a set of rules.
+    ```
+    && And
+    || Or
+    ! Not
+    ```
+
+### Adding Javascript to websites
+1. Inline JS
+    ```
+    <body onload = "alert('Hello')">
+    ```
+2. Internal JS
+    ```
+    <script type="tetx/javascript">
+        alert("hello");
+    </script>
+    ``` 
+3. External JS
+    ```
+    <script src="index.js" charset="utf-8"></script>
+    ```
+
+### DOM (Document Object Model)
+* Represents the web page as a tree of objects that can be selected and manipulated.
+* JavaScript can interact with the DOM to dynamically change content and styles without reloading the page.
+
+#### Selecting elements using DOM
+1. Used to select an HTML element by tag, id, class.
+    ```
+    document.getElementByTagName("ul"); // selects the ul tag
+
+    document.getElementByClassName("container"); // selects the container class
+
+    document.getElementById("image1") // selects the image1 tag
+
+    document.querySelector("h1"); // helps to select wide range of tags, id and classes. Just like we do in CSS.
+    ```
+
+#### Manipulating styles of HTML element
+* To manipulate the style of the HTML element attributes
+    ```
+    document.querySelector("h1").style.color = "red";
+
+    document.querySelector("h1").style.fontSize = "10rem";
+
+    document.querySelector("h1").style.padding = "30%"
+    ```
+
+* Adding class to a list of classes of an element
+    ```
+    <button class="btn">click me</button>
+    ```
+
+    ```
+    document.querySelector("button").classList.add("invisible"); // added class invisible to the button
+    ```
+
+* Removing class from a list of classes of an element
+    ```
+    document.querySelector("button").classList.remove("invisible"); // removed class invisible from the button
+    ```
+
+* Toggling if on then off else vice versa
+    ```
+    document.querySelector("button").classList.toggle("invisible");
+    ```
+
+#### Text manipulation and text content property
+* Manipulating the content writtien inside the HTML Tag
+    ```
+    document.querySelector("h1").innerHTML="Good Bye"; // gives all the html inside the html tag
+
+    document.querySelector("h1").textContent="Hello World"; //only selects the text content
+    ```
